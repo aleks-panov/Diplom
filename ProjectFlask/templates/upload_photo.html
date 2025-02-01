@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Загрузить фотографию</h2>
+    <form method="post" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.title.label }}<br>
+            {{ form.title(size=32) }}
+        </p>
+        <p>
+            {{ form.image.label }}<br>
+            {{ form.image }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
